@@ -7,7 +7,11 @@ import uuid # For generating unique IDs for FHIR resources
 # Attempt to import fhir.resources for FHIR object creation
 # If you don't have this library, install it: pip install fhir.resources
 # As of my last update, version 7.1.0 was recent.
+
+from fhir.resources.organization import Organization
+
 try:
+    from fhir.resources.organization import Organization
     from fhir.resources.patient import Patient
     from fhir.resources.questionnaire import Questionnaire, QuestionnaireItem
     from fhir.resources.careplan import CarePlan, CarePlanActivity, CarePlanActivityDetail
@@ -21,10 +25,13 @@ try:
         Date, DateTime, Period, Coding, CodeableConcept, Reference, Identifier, HumanName, Address, ContactPoint
     )
     FHIR_RESOURCES_AVAILABLE = True
+    print("Successfully imported fhir.resources.")
 except ImportError:
     FHIR_RESOURCES_AVAILABLE = False
     print("WARNING: fhir.resources library not found. FHIR objects will be represented as basic dictionaries.")
     print("To install: pip install fhir.resources")
+
+print(f"FHIR_RESOURCES_AVAILABLE: {FHIR_RESOURCES_AVAILABLE}")
 
 app = Flask(__name__)
 
