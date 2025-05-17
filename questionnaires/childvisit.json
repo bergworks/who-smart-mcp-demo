@@ -1,0 +1,137 @@
+{
+  "date": "2025-05-17T19:33:06.298783",
+  "description": "Questionnaire to screen for common child health danger signs.",
+  "id": "child-health-screening-q1",
+  "item": [
+    {
+      "item": [
+        {
+          "linkId": "1.1",
+          "text": "Is the child able to drink or breastfeed?",
+          "type": "boolean"
+        },
+        {
+          "linkId": "1.2",
+          "text": "Does the child vomit everything?",
+          "type": "boolean"
+        },
+        {
+          "linkId": "1.3",
+          "text": "Has the child had convulsions?",
+          "type": "boolean"
+        },
+        {
+          "linkId": "1.4",
+          "text": "Is the child lethargic or unconscious?",
+          "type": "boolean"
+        }
+      ],
+      "linkId": "1",
+      "text": "General Danger Signs (ask mother)",
+      "type": "group"
+    },
+    {
+      "item": [
+        {
+          "linkId": "2.1",
+          "text": "Does the child have a cough?",
+          "type": "boolean"
+        },
+        {
+          "enableWhen": [
+            {
+              "answerBoolean": true,
+              "operator": "=",
+              "question": "2.1"
+            }
+          ],
+          "linkId": "2.2",
+          "text": "For how long (days)?",
+          "type": "integer"
+        },
+        {
+          "linkId": "2.3",
+          "text": "Is breathing fast? (Observe)",
+          "type": "boolean"
+        },
+        {
+          "linkId": "2.4",
+          "text": "Is there chest indrawing? (Observe)",
+          "type": "boolean"
+        },
+        {
+          "linkId": "2.5",
+          "text": "Is there stridor? (Observe)",
+          "type": "boolean"
+        }
+      ],
+      "linkId": "2",
+      "text": "Cough or Difficult Breathing",
+      "type": "group"
+    },
+    {
+      "item": [
+        {
+          "linkId": "3.1",
+          "text": "Does the child have diarrhoea?",
+          "type": "boolean"
+        },
+        {
+          "enableWhen": [
+            {
+              "answerBoolean": true,
+              "operator": "=",
+              "question": "3.1"
+            }
+          ],
+          "linkId": "3.2",
+          "text": "For how long (days)?",
+          "type": "integer"
+        },
+        {
+          "enableWhen": [
+            {
+              "answerBoolean": true,
+              "operator": "=",
+              "question": "3.1"
+            }
+          ],
+          "linkId": "3.3",
+          "text": "Is there blood in the stool?",
+          "type": "boolean"
+        }
+      ],
+      "linkId": "3",
+      "text": "Diarrhoea",
+      "type": "group"
+    },
+    {
+      "item": [
+        {
+          "linkId": "4.1",
+          "text": "Does the child have fever (by history or feels hot or temperature >=37.5°C)?",
+          "type": "boolean"
+        },
+        {
+          "enableWhen": [
+            {
+              "answerBoolean": true,
+              "operator": "=",
+              "question": "4.1"
+            }
+          ],
+          "linkId": "4.2",
+          "text": "For how long (days)?",
+          "type": "integer"
+        }
+      ],
+      "linkId": "4",
+      "text": "Fever",
+      "type": "group"
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "status": "draft",
+  "title": "Child Health Screening (Danger Signs)",
+  "url": "http://localhost:5001/child/health-screening/questionnaire"
+}
