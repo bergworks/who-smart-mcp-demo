@@ -1,0 +1,4 @@
+Flask>=2.0
+python-dateutil>=2.8
+fhir.resources>=7.1.0 # Optional, but highly recommended for FHIR object handling
+# For production, you'd also add your WSGI server, e.g., gunicorn
