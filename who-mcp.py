@@ -13,7 +13,7 @@ def register_pregnancy(patient_details: dict) -> dict:
 # ANC: Get Patient Registration Questionnaire (Resource)
 @mcp.resource("anc://questionnaire/patient-registration")
 def get_patient_registration_questionnaire() -> dict:
-    """Get a sample FHIR Questionnaire for patient registration."""
+    """Get a sample FHIR Questionnaire for patient registration for a pregnancy."""
     return who_logic.get_patient_registration_questionnaire_logic()
 
 # ANC: Calculate EDD (Tool)
